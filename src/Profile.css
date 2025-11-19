@@ -1,0 +1,222 @@
+/* Header styles (existing) */
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #d35400;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links button {
+  margin-left: 1rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Profile page layout */
+.profile-container {
+  display: flex;
+  margin-top: 70px; /* header height */
+  min-height: calc(100vh - 70px);
+}
+
+/* Sidebar */
+.profile-sidebar {
+  width: 200px;
+  background-color: #f8f8f8;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+}
+
+.profile-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-sidebar li {
+  padding: 12px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.profile-sidebar li:hover,
+.profile-sidebar li.active {
+  background-color: #d35400;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Main Content */
+.profile-main {
+  flex: 1;
+  padding: 30px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center; /* center the profile card */
+}
+
+/* Profile card */
+.profile-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.profile-card h2 {
+  margin-bottom: 20px;
+  color: #d35400;
+}
+
+.profile-card p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.profile-card p strong {
+  color: #555;
+}
+
+/* Orders section container */
+.orders-section {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Orders list as grid */
+.orders-list {
+  list-style: none;        /* remove bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;         /* wrap cards to next row */
+  gap: 20px;               /* space between cards */
+  justify-content: flex-start;
+}
+
+/* Each order card */
+.order-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;           /* smaller padding */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;             /* smaller width */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Order header/details layout */
+.order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;       /* smaller font */
+}
+
+.order-details div {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Products displayed horizontally */
+.order-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.order-products span {
+  background-color: #f0f0f0;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Optional: make order title stand out */
+.order-card h3 {
+  margin-bottom: 10px;
+  color: #d35400;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .orders-list {
+    justify-content: center;
+  }
+
+  .order-card {
+    width: 100%;           /* full width on small screens */
+  }
+
+  .order-details div {
+    flex-direction: column;
+    gap: 3px;
+  }
+}
+
+/* Tracking Progress */
+.order-tracking {
+  margin-top: 1rem;
+}
+
+.tracking-bar-container {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.tracking-bar {
+  height: 100%;
+  background: #4caf50;
+  transition: width 0.5s ease;
+}
+
+.tracking-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #555;
+}

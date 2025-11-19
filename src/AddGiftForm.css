@@ -1,0 +1,86 @@
+.add-gift-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f7fa;
+}
+
+.add-gift-card {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.add-gift-card h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.add-gift-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.add-gift-form input,
+.add-gift-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.add-gift-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+.back-btn {
+  margin-top: 15px;
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background-color: #333;
+}
+
+/* ✅ Success/Error message */
+.success-msg {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-5px); }
+  20%, 80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-5px); }
+}

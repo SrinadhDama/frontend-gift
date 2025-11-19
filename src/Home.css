@@ -1,0 +1,170 @@
+/* ---------------- General ---------------- */
+.home-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff5e6;
+    color: #333;
+    padding: 0 5%; /* add spacing left & right for all sections */
+}
+
+/* ---------------- Section Container ---------------- */
+.section-container {
+    width: 100%;
+    max-width: 1200px; /* uniform max width */
+    margin: 2rem auto;  /* auto centering + space from top/bottom */
+}
+
+/* ---------------- Carousel Section ---------------- */
+.carousel-section {
+    height: 500px;
+    position: relative;
+    border-radius: 20px; /* rounded rectangle edges */
+    overflow: hidden; /* hide overflow outside rounded edges */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    margin: 2rem 0; /* spacing top & bottom */
+}
+
+.carousel-img-container {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff; /* fallback background */
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* fill background, no blank spaces */
+    border-radius: 20px;
+}
+
+/* ---------------- Carousel Caption ---------------- */
+.carousel-caption {
+    color: #000;
+    text-shadow: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.carousel-caption h3,
+.carousel-caption p {
+    color: #000 !important;
+}
+
+/* ---------------- Shop Now Section ---------------- */
+.shop-now-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    background: linear-gradient(135deg, #ffd6a5, #ffe5d9);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.shop-now-section h2 {
+    margin-bottom: 1rem;
+    color: #d35400;
+    font-size: 2rem;
+}
+
+.shop-now-section p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.shop-button {
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #d35400;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shop-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+}
+
+/* ---------------- Features Section ---------------- */
+.features-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 2rem;
+    flex: 1 1 250px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.feature-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #d35400;
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 900px) {
+    .features-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-section {
+        height: 300px;
+    }
+
+    .carousel-img-container {
+        height: 300px;
+    }
+
+    .shop-now-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-section {
+        height: 250px;
+    }
+
+    .carousel-img-container {
+        height: 250px;
+    }
+
+    .shop-now-section {
+        padding: 2rem 1rem;
+    }
+
+    .shop-now-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .shop-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}

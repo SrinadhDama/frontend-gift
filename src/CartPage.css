@@ -1,0 +1,152 @@
+/* Container around the entire cart */
+.cart-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+/* Heading */
+.cart-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Grid layout for multiple cart cards */
+.cart-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* Individual cart item card */
+.cart-card {
+  display: flex;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 500px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.cart-card:hover {
+  transform: scale(1.01);
+}
+
+/* Gift image styling */
+.cart-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-right: 1px solid #eee;
+}
+
+/* Text and controls container */
+.cart-details {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Product title */
+.cart-details h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Description and price */
+.cart-details p {
+  margin: 4px 0;
+  color: #555;
+}
+
+/* Quantity control layout */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  padding: 6px 14px;
+  font-size: 18px;
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quantity-controls button:hover:not(:disabled) {
+  background-color: #dcdcdc;
+}
+
+.quantity-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Remove button */
+.remove-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f44336;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: start;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Total price styling */
+.total-price {
+  text-align: right;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  padding-right: 10px;
+}
+
+.back-btn {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  background-color: #ddd;
+}
+
+.pay-btn {
+  margin-top: 10px;
+   margin-left: auto; /* pushes button to right */
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  display: flex;
+  background-color: #644afb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

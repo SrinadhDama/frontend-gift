@@ -1,0 +1,121 @@
+.register-page-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(270deg, #ffe5d9, #ffd6a5, #fef6e4);
+  background-size: 600% 600%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: gradientAnimation 20s ease infinite;
+  position: relative;
+  z-index: 0;
+}
+
+/* Animate gradient background */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Left Form Section */
+.form-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  z-index: 1;
+  position: relative;
+}
+
+.register-box {
+  width: 95%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 12px 25px rgba(146, 24, 24, 0.15);
+  background-color: #ffffff;
+}
+
+.register-box h2 {
+  text-align: center;
+  color: #1d1c1c;
+  margin-bottom: 1rem;
+}
+
+/* Right Info Section */
+.info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 4rem;
+  color: #444;
+  background: linear-gradient(135deg, #f6e0d6, #51402b);
+  z-index: 1;
+  position: relative;
+}
+
+.info-section h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #110801;
+}
+
+/* Grid layout for info cards (2x2) */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card styling */
+.info-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px rgba(138, 13, 13, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 25px rgba(172, 16, 16, 0.2);
+}
+
+.info-card .icon {
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  margin-bottom: 0.5rem;
+  color: #d35400;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive: stack cards vertically on smaller screens */
+@media (max-width: 900px) {
+  .register-page-container {
+    flex-direction: column;
+  }
+
+  .form-section, .info-section {
+    flex: none;
+    width: 100%;
+    clip-path: none;
+    padding: 2rem;
+  }
+
+  .info-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
